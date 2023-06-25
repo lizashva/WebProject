@@ -93,7 +93,6 @@ app.get("*", (req, res) => {
   const filePath = path.join(
     __dirname,
     "..",
-    "..",
     "Client",
     "dist",
     "index.html"
