@@ -11,7 +11,6 @@ var tasksRouter = require("./routes/tasks");
 var categoriesRouter = require("./routes/categories");
 var inquiriesRouter = require("./routes/inquiries");
 var cors = require("cors");
-
 var app = express();
 app.use(
   cors({
@@ -68,7 +67,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
+//app.use("/", indexRouter);
 app.use("/user", usersRouter);
 app.use("/userTasks", tasksRouter);
 app.use("/categories", categoriesRouter);
