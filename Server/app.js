@@ -102,5 +102,5 @@ app.get("*", (req, res) => {
   console.log("File path:", filePath);
   res.sendFile(filePath);
 });
-//Liza
+
 module.exports = app;
