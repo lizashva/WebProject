@@ -37,10 +37,10 @@ export default function ParentLogin({ children }) {
                     <p class={styles.text}>
                       TskManager a powerful and intuitive online platform
                       designed to help you manage your personal tasks
-                      efficiently and stay organized. TaskMaster offers a
+                      efficiently and stay organized. TskManager offers a
                       comprehensive set of tools and features to assist you in
                       prioritizing, tracking, and completing your tasks
-                      effectively. With TaskMaster, you can easily create and
+                      effectively. With TskManager, you can easily create and
                       categorize your tasks based on different aspects of your
                       life, such as work, personal projects, health, or errands.
                       The user-friendly interface allows you to input task

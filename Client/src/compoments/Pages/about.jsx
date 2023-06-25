@@ -59,7 +59,7 @@ export default function About() {
             style={{ textAlign: "center" }}
           >
             Your data's security and privacy are of utmost importance.
-            TaskMaster employs robust security measures to safeguard your
+            TskManager employs robust security measures to safeguard your
             information, ensuring that your tasks and personal data are
             protected.
           </div>
@@ -76,9 +76,9 @@ export default function About() {
           >
             Whether you're a busy professional, a student juggling multiple
             responsibilities, or simply someone looking to stay organized in
-            their personal life, TaskMaster is your trusted companion for
+            their personal life, TskManager is your trusted companion for
             efficient personal task management. Take control of your tasks,
-            reduce stress, and accomplish more with TaskMaster.
+            reduce stress, and accomplish more with TskManager.
           </div>
         </div>
       </div>

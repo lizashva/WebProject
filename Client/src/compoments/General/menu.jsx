@@ -39,7 +39,7 @@ export default function Menu() {
             className={`${styles.menu} `}
             onClick={() => dispatch({ type: "SET_VIEW", param: "contant_us" })}
           >
-            Contant us
+            Contact us
           </div>
         </div>
       </div>
