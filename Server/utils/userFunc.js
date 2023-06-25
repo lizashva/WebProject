@@ -13,10 +13,10 @@ async function getUsers(req, res, next)
     const listCategories = await utilFuncs.getCategories();
     // Retrieves the user's tasks and sends the response
     const resultFromDb = async () => {
+        delete login_user.Password;
         const jsonResult = JSON.stringify(login_user);
         if (login_user !== null) {
           const listTasks = await utilFuncs.getUsersTasks(login_user.id);
-        //const idString = login_user._id.toString();
           const resultData = { "user": login_user, "categories": listCategories, "tasks": listTasks};
           res.status(200).send(resultData);
         } else {
