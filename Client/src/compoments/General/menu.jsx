@@ -1,10 +1,8 @@
 import React from "react";
 import { styles } from "../../utils/styles";
 import { useContext } from "preact/hooks";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import User from "../Profile/userProfile";
-
+import {FiLogOut} from "react-icons/fi";
 import Context from "../../utils/context";
 import logoImage from "../../assets/TskManagerLogoRemovebg.png";
 
@@ -51,7 +49,7 @@ export default function Menu() {
           className="flex justify-center self-center text-white  py-1 rounded"
           onClick={LogOut}
         >
-          <FontAwesomeIcon icon={faSignOutAlt} />
+          <FiLogOut size={24}/>
         </button>
       </div>
     </div>
