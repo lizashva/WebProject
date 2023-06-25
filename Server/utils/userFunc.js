@@ -20,7 +20,7 @@ async function getUsers(req, res, next)
           const resultData = { "user": login_user, "categories": listCategories, "tasks": listTasks};
           res.status(200).send(resultData);
         } else {
-        res.status(400).send(jsonResult);
+        res.status(404).send(jsonResult);
         }
     };
     resultFromDb();

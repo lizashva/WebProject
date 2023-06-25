@@ -23,27 +23,34 @@ export default function Login() {
   const LoginUser = async () => {
     const user = document.querySelector("#username_id").value;
     const password = document.querySelector("#password_id").value;
-    const response = await fetch(
-      `/user/${user}/${password}`,
-    );
-    const responseData = await response.json();
-    if (response.status === 200) {
-      localStorage.setItem("user", JSON.stringify(responseData.user));
-      localStorage.setItem("tasks", JSON.stringify(responseData.tasks));
-      localStorage.setItem(
-        "categories",
-        JSON.stringify(responseData.categories),
-      );
-      dispatch({ type: "SET_DATA", param: responseData.tasks });
-      dispatch({ type: "SET_USER", param: responseData.user["id"] });
-      dispatch({ type: "SET_VIEW", param: "home" });
-    } else
-      (error) => {
+    
+   fetch(`/user/${user}/${password}`)
+      .then((response) => {
+
+        if (response.status === 200) {
+          return response.json(); // Return the Promise here
+        } else {
+          throw new Error("Invalid username or password");
+        }
+      })
+      .then((data) => {
+        const responseData =  data
+        localStorage.setItem("user", JSON.stringify(responseData.user));
+        localStorage.setItem("tasks", JSON.stringify(responseData.tasks));
+        localStorage.setItem(
+          "categories",
+          JSON.stringify(responseData.categories),
+        );
+        dispatch({ type: "SET_DATA", param: responseData.tasks });
+        dispatch({ type: "SET_USER", param: responseData.user["id"] });
+        dispatch({ type: "SET_VIEW", param: "home" });
+      }) .catch((error) => {
+        console.log("hi")
         setShowErrorLogin(true);
         setTimeout(() => {
           setShowErrorLogin(false);
         }, 4000);
-      };
+      });
   };
 
   return (
@@ -103,7 +110,6 @@ export default function Login() {
           >
             Log in
           </button>
-
           {ShowErrorLogin && (
             <p class="text-red-600">The user or password not right</p>
           )}
