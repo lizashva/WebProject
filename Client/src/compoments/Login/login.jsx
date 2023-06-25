@@ -45,7 +45,6 @@ export default function Login() {
         dispatch({ type: "SET_USER", param: responseData.user["id"] });
         dispatch({ type: "SET_VIEW", param: "home" });
       }) .catch((error) => {
-        console.log("hi")
         setShowErrorLogin(true);
         setTimeout(() => {
           setShowErrorLogin(false);

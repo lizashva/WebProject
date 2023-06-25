@@ -23,7 +23,11 @@ async function getUsers(req, res, next)
         res.status(404).send(jsonResult);
         }
     };
-    resultFromDb();
+    if (login_user != null){
+      resultFromDb();
+    } else {
+      res.status(404).send(login_user);
+    }
 }
 
 // Inserts a new user into the database
