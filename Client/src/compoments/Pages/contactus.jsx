@@ -19,7 +19,7 @@ export default function ContactUs() {
       Message: message,
     };
     // Send the POST request with the user data
-    fetch("http://localhost:3000/inquiries/", {
+    fetch("/inquiries/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

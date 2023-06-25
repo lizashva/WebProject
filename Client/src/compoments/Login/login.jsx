@@ -24,7 +24,7 @@ export default function Login() {
     const user = document.querySelector("#username_id").value;
     const password = document.querySelector("#password_id").value;
     const response = await fetch(
-      `http://localhost:3000/user/${user}/${password}`,
+      `/user/${user}/${password}`,
     );
     const responseData = await response.json();
     if (response.status === 200) {

@@ -35,7 +35,7 @@ export default function EditProfile({ addEditShow, setEditFormShow }) {
     user["Email"] = email;
 
     // Send the PATCH request with the user data
-    fetch("http://localhost:3000/user", {
+    fetch("/user", {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

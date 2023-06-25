@@ -57,7 +57,7 @@ export default function Mission({
     };
     try {
       let response = await fetch(
-        "http://localhost:3000/userTasks",
+        "/userTasks",
         {
           method: "PATCH",
           headers: {
@@ -93,7 +93,7 @@ export default function Mission({
         userId: JSON.parse(localStorage.getItem("user")).id,
       };
       const response = await fetch(
-        "http:localhost:3000/userTasks",
+        "/userTasks",
         {
           method: "DELETE",
           headers: {

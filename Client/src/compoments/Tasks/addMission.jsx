@@ -49,7 +49,7 @@ const AddMission = ({
     };
 
     // Send the POST request with the mission data
-    fetch("http://localhost:3000/userTasks/", {
+    fetch("/userTasks/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

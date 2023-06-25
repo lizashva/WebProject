@@ -15,7 +15,7 @@ export default function NewCategory({
     };
     try {
       const response = await fetch(
-        "http:localhost:3000/categories/",
+        "/categories/",
         {
           method: "POST",
           headers: {

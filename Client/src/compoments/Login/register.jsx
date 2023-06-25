@@ -41,7 +41,7 @@ export default function Register() {
     };
 
     // Send the POST request with the mission data
-    fetch("http://localhost:3000/user", {
+    fetch("/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
